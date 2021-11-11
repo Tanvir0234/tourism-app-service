@@ -1,23 +1,46 @@
-import logo from './logo.svg';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
+import AuthProvider from './Components/Context/AuthProvider';
+import Details from './Components/Details/Details';
+import Login from './Components/Firebase/Login/Login';
+import Register from './Components/Firebase/Register/Register';
+import Home from './Components/Home/Home';
+import Products from './Components/Products.js/Products';
+import Footer from './Components/Shared/Footer/Footer';
+import Header from './Components/Shared/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <AuthProvider>
+    <BrowserRouter>
+     <Header/>
+     <Switch>
+        <Route exact path="/">
+           <Home></Home>
+        </Route>
+        <Route path="/home">
+           <Home></Home>
+        </Route>
+        <Route path="/products">
+           <Products></Products>
+        </Route>
+        <Route path="/login">
+        <Login></Login>
+        </Route>
+        <Route path="/register">
+           <Register></Register>
+        </Route>
+        <Route path="/details/:productId">
+           <Details></Details>
+        </Route>
+
+     </Switch>
+     <Footer></Footer>
+     </BrowserRouter>
+    </AuthProvider>
     </div>
   );
 }

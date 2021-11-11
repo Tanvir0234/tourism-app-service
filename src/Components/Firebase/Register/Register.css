@@ -1,0 +1,10 @@
+.register-bg{
+    background-image: url('../../../images/register.jpg');
+
+}
+.bg-form{
+    background:rgba(0,0,0,0.5);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 40px 50px;
+}

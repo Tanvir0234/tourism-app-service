@@ -1,0 +1,102 @@
+[
+    {
+        "id":"1",
+        "name":"Stained Teeth ",
+        "price":"$150.00",
+        "description":"Your teeth are like your laundry: The right approach will remove many   stains. Foods, medications, tobacco, and trauma are some of the things that can discolor your teeth. ",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product12-1.jpg"
+
+    },
+    {
+        "id":"2",
+        "name":"Cavities",
+        "price":"$120.00",
+        "description":"These little holes in your teeth are bad news. You get them when a sticky bacteria, called plaque, builds up on your teeth, slowly destroying the hard outer shell, called enamel.",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product8-1.jpg"
+
+    },
+    {
+        "id":"3",
+        "name":"Chipped Tooth",
+        "price":"$130.00",
+        "description":"It's the No. 1 type of dental injury. An accident can cause a chip. So can something much less dramatic, like chomping popcorn.",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product11-1.jpg"
+
+    },
+    {
+        "id":"4",
+        "name":"Impacted Teeth ",
+        "price":"$230.99",
+        "description":"An adult tooth that doesn't come in properly is impacted. It usually happens when a tooth is stuck against another tooth, bone, or soft tissue. ",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product13-1.jpg"
+
+    },
+    {
+        "id":"5",
+        "name":"Cracked Tooth",
+        "price":"$110.00",
+        "description":"You were playing football without a mouth guard, or chewing, or maybe you don’t know how it happened, but now you’ve got a cracked molar. ",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product3-1.jpg"
+
+    },
+    {
+        "id":"6",
+        "name":"Sensitive to Cold ",
+        "price":"$80.00",
+        "description":"Ice cream should taste good, not make you wince when the cold hits your teeth. The first step is to find the cause. ",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product5-1.jpg"
+
+    },
+    
+    {
+        "id":"7",
+        "name":"Black Metal Bracelet Strap",
+        "price":"$230.00",
+        "description":"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product13-1.jpg"
+
+    },
+    {
+        "id":"8",
+        "name":"Crooked Teeth",
+        "price":"$270.00",
+        "description":"The fix -- orthodontia -- isn’t just for kids. And straightening crooked teeth and aligning your bite doesn’t just make for a prettier smile.",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product12-1.jpg"
+
+    },
+    {
+        "id":"9",
+        "name":"Gap Between Teeth ",
+        "price":"$93.00",
+        "description":"You may not consider a gap between the front teeth a problem at all. Famous people who sport the look include singer Madonna",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product12-1.jpg"
+
+    },
+    {
+        "id":"10",
+        "name":"Gum Problems",
+        "price":"$120",
+        "description":"Do your gums bleed easily? Are they tender? Do you notice them pulling away from your teeth? You might have gum disease (gingivitis).",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product12-1.jpg"
+
+    },
+    {
+        "id":"11",
+        "name":"Grinding Teeth ",
+        "price":"$70.00",
+        "description":"Teeth grinding, or bruxism, can wear teeth down over time. It is most often caused by stress and sleeping habits. ",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product12-1.jpg"
+
+    },
+    {
+        "id":"12",
+        "name":"Broken Tooth",
+        "price":"$8.00",
+        "description":"Dental Treatments for a broken, cracked or chipped tooth will depend on how bad the damage is.",
+        "image":"https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/uploads/2013/06/product12-1.jpg"
+
+    }
+    
+]
+
+
