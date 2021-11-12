@@ -20,17 +20,19 @@ const Login = () => {
         const newLoginData = { ...loginData };
         newLoginData[field] = value;
         setLoginData(newLoginData);
+        //console.log(newLoginData)
     }
     const handleLoginSubmit = e => {
 
         loginUser(loginData.email, loginData.password);
+        
         history.push(redirect_uri);
         e.preventDefault();
     }
     return (
         <div className="row login-bg py-5 ">
-            <div className="col-lg-6 col-sm-12">
-                <div className="w-50 mt-5 mb-5 bg-white p-4 border rounded shadow">
+            <div className="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center">
+                <div className="w-75 mt-5 mb-5 bg-white p-4 border rounded shadow">
                     <h1 className="text-center">Log In</h1>
                     <form onSubmit={handleLoginSubmit}>
                         <div className="mb-3">
@@ -43,10 +45,10 @@ const Login = () => {
                             <input name="password" onBlur={handleOnChange} type="password" className="form-control" id="exampleInputPassword1"/>
                         </div>
                        
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <input type="submit" className="btn btn-primary"/>
                     </form>
                     <br />
-                    <p className="text-white">New to Our Website ? <Link to="/register">Create Acount</Link> </p>
+                    <p>New to Our Website ? <Link to="/register">Create Acount</Link> </p>
 
                 </div>
             </div>

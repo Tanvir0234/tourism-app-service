@@ -5,17 +5,36 @@ import { useHistory } from "react-router";
 initializeAuthentication()
 
 const useFirebase = () =>{
+    const history =useHistory();
     const [user, setUser] = useState({});
     const [authError, setAuthError] = useState('');
     const  [isLoading, setIsLoading] = useState(true)
     const auth = getAuth();
   
-    const registerUser = (email, password) => {
+    const registerUser = (email, password,name,history) => {
         setIsLoading(true);
       createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
          setAuthError('')
-          setUser(user)
+
+         //Send Name Firebase After Creation---------------------
+         const newUser ={email, displayName: name}
+         
+          setUser(newUser)
+
+          //information send to db----------
+          saveUserToDb(email, name);
+
+          updateProfile(auth.currentUser,{
+            displayName :name
+          }).then(()=>{
+
+          }).catch((error)=>{
+
+          })
+          history.replace('/')
+
+          
           // ...
         })
         .catch((error) => {
@@ -30,7 +49,7 @@ const useFirebase = () =>{
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
           setAuthError('')
-        setUser(user);
+        //setUser(user);
       
       })
       .catch((error) => {
@@ -62,6 +81,22 @@ const useFirebase = () =>{
         
   
     }
+
+    const saveUserToDb =(email , displayName)=>{
+
+      const user = {email , displayName};
+      fetch('http://localhost:5000/users',{
+        method: 'POST',
+        headers:{
+          'content-type':'application/json'
+        },
+        body:JSON.stringify(user)
+      })
+      .then()
+    }
+
+
+
   
     return {
         user,

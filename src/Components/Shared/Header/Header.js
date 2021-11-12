@@ -14,9 +14,9 @@ const Header = () => {
                     <Navbar.Brand className="text-white" href="#home">
                         <img
                             alt=""
-                            src="https://2qndqt12n4813dp6kr3fdr92-wpengine.netdna-ssl.com/wp-content/themes/swisseagle/images/logo.png"
-                            width="120"
-                            height="40"
+                            src="https://elementor.detheme.com/suissland/wp-content/uploads/sites/27/2021/06/suiss-white-1024x220.png"
+                            width="130"
+                            height="60"
                             className="d-inline-block align-top"
                         />{' '}
                        
@@ -43,8 +43,10 @@ const Header = () => {
 
            {user?.email ? (
              <>
-         
-               <p className="mb-0 mt-2 ms-3 fw-bold">
+         <Nav.Link className="text-white fw-bold me-2" as={Link} to="/dashboard">
+                      Dashboard
+                    </Nav.Link>
+               <p className="mb-0 mt-2 ms-3 fw-bold text-white">
             
                 {user.displayName}
                </p>
@@ -58,7 +60,7 @@ const Header = () => {
                </Nav.Link> 
              </>
            ) : (
-             <Nav.Link className="btn  text-primary fw-bold" as={Link} to="/login">
+             <Nav.Link className="btn btn-warning text-primary fw-bold" as={Link} to="/login">
                log In
              </Nav.Link>
            )}

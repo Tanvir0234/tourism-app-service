@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './Components/Context/AuthProvider';
+import Dashboard from './Components/Dashboard/Dashboard';
 import Details from './Components/Details/Details';
 import Login from './Components/Firebase/Login/Login';
 import Register from './Components/Firebase/Register/Register';
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path="/register">
            <Register></Register>
+        </Route>
+        <Route path="/dashboard">
+           <Dashboard></Dashboard>
         </Route>
         <Route path="/details/:productId">
            <Details></Details>

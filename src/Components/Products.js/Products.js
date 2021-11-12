@@ -1,4 +1,5 @@
 import React from 'react';
+import './Products.css'
 import { Link } from 'react-router-dom';
 import useProducts from '../Hooks/useProducts';
 
@@ -15,7 +16,7 @@ const Products = () => {
 
                         <div className="card h-100 shadow  border rounded-3">
 
-                            <img src={product.image} className="size img-fluid rounded-start w-100" alt="..." />
+                            <img src={product.image} className="size  rounded-start w-100" alt="..." />
 
 
                             <div className="card-body">
@@ -24,7 +25,7 @@ const Products = () => {
                                 <h6 className="card-text text-center">Price : ${product.price}</h6>
                             </div>
 
-                            <Link to={`/details/${product.id}`}>
+                            <Link to={`/details/${product._id}`}>
                                 <button className="btn btn-danger align mx-4 mb-3">See Details  </button>
                             </Link>
                         </div>

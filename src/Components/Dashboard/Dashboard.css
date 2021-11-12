@@ -1,0 +1,24 @@
+.area {
+    background-color: #4ec0cb;
+    color: #fff;
+    height: 100vh;
+  }
+  .admin-container {
+    overflow-x: hidden;
+    
+  }
+  .menu {
+    list-style: none;
+    cursor: pointer;
+  }
+  .menu:hover {
+    color:orangered;
+   
+  }
+ .list:hover{
+     background-color: #fff;
+ }
+
+
+
+ 

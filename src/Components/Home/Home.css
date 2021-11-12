@@ -1,4 +1,6 @@
-
+.banner-align{
+    height: 500px !important;
+}
 .carousel-caption{
     bottom: 150px;
 }

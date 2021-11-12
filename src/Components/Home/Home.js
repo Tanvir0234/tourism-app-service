@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './Home.css';
-import banner1 from '../../images/banner/wb4.jpg'
-import banner2 from '../../images/banner/wb2.jpg'
+import banner1 from '../../images/banner/b2.jpg'
+import banner2 from '../../images/banner/b1.jpg'
 import banner3 from '../../images/banner/wb3.jpg'
 import { Link } from 'react-router-dom';
 import useProducts from '../Hooks/useProducts';
@@ -13,10 +13,10 @@ const Home = () => {
 
     return (
         <div>
-            <Carousel className="h-75">
+            <Carousel >
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 banner"
+                        className="d-block w-100 banner-align"
                         src={banner1}
                         alt="First slide"
                     />
@@ -28,13 +28,13 @@ const Home = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 banner"
+                        className="d-block w-100 banner-align"
                         src={banner2}
                         alt="Second slide"
                     />
 
                     <Carousel.Caption className="carousel-caption d-none d-md-block">
-                        <h2>THE WATCH EVERYONE DESIRE </h2>
+                        <h2>THE WATCH <br /> EVERYONE DESIRE </h2>
                         <p>EMPIRE COLLECTION</p>
                         <p><a href="#">More Info</a></p>
 
@@ -42,13 +42,13 @@ const Home = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 banner"
+                        className="d-block w-100 banner-align"
                         src={banner3}
                         alt="Third slide"
                     />
 
                     <Carousel.Caption className="carousel-caption d-none d-md-block">
-                        <h2>AN EXTRA ORDINARY CLASSIC</h2>
+                        <h2>AN EXTRA ORDINARY <br /> CLASSIC</h2>
                         <p>BUILT FOE MEN</p>
                         <p><a href="#">More Info</a></p>
                     </Carousel.Caption>
@@ -66,7 +66,7 @@ const Home = () => {
 
                             <div className="card h-100 shadow  border rounded-3">
 
-                                <img src={product.image} className="rounded-start w-100 img-fluid size" alt="..." />
+                                <img src={product.image} className="rounded-start w-100  size" alt="..." />
 
 
                                 <div className="card-body">
@@ -75,7 +75,7 @@ const Home = () => {
                                     <h6 className="card-text text-center"> Price : ${product.price}</h6>
                                 </div>
 
-                                <Link to={`/details/${product.id}`}>
+                                <Link to={`/details/${product._id}`}>
                                     <button className="btn btn-danger align mx-4 mb-3">See Details</button>
                                 </Link>
                             </div>
