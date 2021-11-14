@@ -4,8 +4,10 @@ import AddProduct from './AddProduct/AddProduct';
 import AllOrders from './AllOrders/AllOrders';
 import Orders from './Orders/Orders';
 import MakeAdmin from './MakeAdmin/MakeAdmin';
+import useAuth from '../Hooks/useAuth';
 
 const Dashboard = () => {
+    const { admin } = useAuth();
     const [isActive, setIsActive] = useState(false)
     const [control, setControl] = useState("myOrders");
     return (
@@ -23,18 +25,10 @@ const Dashboard = () => {
                                                 setControl("orders");
                                                 setIsActive(true)
                                             }}
-                                            
-                                            className={isActive ? ' menu p-2' : "menu p-2" }
+
+                                            className={isActive ? ' menu p-2' : "menu p-2"}
                                         >
                                             Orders
-                                        </li>
-                                    </div>
-                                    <div className="list">
-                                        <li
-                                            onClick={() => setControl("addProduct")}
-                                            className="menu  p-2"
-                                        >
-                                            Add New Product
                                         </li>
                                     </div>
                                     <div className="list">
@@ -45,23 +39,40 @@ const Dashboard = () => {
                                             Manage All Order
                                         </li>
                                     </div>
-                                    <div className="list">
-                                        <li
-                                            onClick={() => setControl("makeAdmin")}
-                                            className="menu   p-2"
-                                        >
-                                            Make Admin
-                                        </li>
-                                    </div>
+                                    {admin && <div>
+                                        <div className="list">
+                                            <li
+                                                onClick={() => setControl("addProduct")}
+                                                className="menu  p-2"
+                                            >
+                                                Add New Product
+                                            </li>
+                                        </div>
+
+                                        <div className="list">
+                                            <li
+                                                onClick={() => setControl("makeAdmin")}
+                                                className="menu   p-2"
+                                            >
+                                                Make Admin
+                                            </li>
+                                        </div>
+                                    </div>}
+
 
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-9 text-center  text-center">
                             {control === "orders" && <Orders></Orders>}
-                            {control === "addProduct" && <AddProduct></AddProduct>}
                             {control === "manageOrder" && <AllOrders></AllOrders>}
+
+
                             {control === "makeAdmin" && <MakeAdmin></MakeAdmin>}
+                            {control === "addProduct" && <AddProduct></AddProduct>}
+
+
+
                         </div>
                     </div>
                 </div>

@@ -19,9 +19,12 @@ const MakeAdmin = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+            if(data.modifiedCount){
+                alert('Added Admin Successfully')
+            
+            }
         })
-
+        
         e.preventDefault()
     }
 
