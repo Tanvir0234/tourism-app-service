@@ -15,7 +15,7 @@ const Details = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://mighty-reaches-12627.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setDetails(data))
     }, []);
@@ -34,7 +34,7 @@ const Details = () => {
 
 
         data.stetus="pending";
-        fetch("http://localhost:5000/placeOrder", {
+        fetch("https://mighty-reaches-12627.herokuapp.com/placeOrder", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

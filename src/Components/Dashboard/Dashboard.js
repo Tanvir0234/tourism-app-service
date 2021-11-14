@@ -9,7 +9,7 @@ import AddReview from './AddReview/AddReview';
 import Payment from './Payment/Payment';
 
 const Dashboard = () => {
-    const { admin } = useAuth();
+    const { admin , user } = useAuth();
     const [isActive, setIsActive] = useState(false)
     const [control, setControl] = useState("myOrders");
     return (
@@ -19,7 +19,8 @@ const Dashboard = () => {
                     <div className="row admin-container">
                         <div className="col-md-3 col-sm-12">
                             <div className="area  p-1">
-                                <h6 className="text-center fs-2 text-white fw-bold mt-3">Dashboard</h6>
+                                <h6 className="text-center fs-2 text-white fw-bold mt-3">{user?.displayName}</h6>
+                               {admin &&<p className="text-center">Admin</p>}
                                 <div className=" mt-3 ">
                                     <div className="list">
                                         <li

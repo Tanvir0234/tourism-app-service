@@ -7,6 +7,8 @@ import banner3 from '../../images/banner/wb3.jpg'
 import { Link } from 'react-router-dom';
 import useProducts from '../Hooks/useProducts';
 import Review from '../Review/Review';
+import Header from '../Shared/Header/Header';
+import Footer from '../Shared/Footer/Footer';
 
 
 const Home = () => {
@@ -19,6 +21,8 @@ const Home = () => {
 
     return (
         <div>
+            <Header/>
+     
             <Carousel >
                 <Carousel.Item>
                     <img
@@ -98,7 +102,7 @@ const Home = () => {
           
 
 
-
+            <Footer></Footer>
         </div>
     );
 };

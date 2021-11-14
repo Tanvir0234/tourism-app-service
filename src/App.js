@@ -20,7 +20,7 @@ function App() {
     <div>
     <AuthProvider>
     <BrowserRouter>
-     <Header/>
+    
      <Switch>
         <Route exact path="/">
            <Home></Home>
@@ -45,7 +45,7 @@ function App() {
         </PrivateRoute>
 
      </Switch>
-     <Footer></Footer>
+    
      </BrowserRouter>
     </AuthProvider>
     </div>

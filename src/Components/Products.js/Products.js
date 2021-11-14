@@ -2,11 +2,14 @@ import React from 'react';
 import './Products.css'
 import { Link } from 'react-router-dom';
 import useProducts from '../Hooks/useProducts';
+import Header from '../Shared/Header/Header';
+import Footer from '../Shared/Footer/Footer';
 
 const Products = () => {
     const {products} = useProducts([]);
     return (
         <div>
+            <Header/>
             <div className="container mt-2 ">
             <h1 className="text-center m-4">Our <span className="text-danger">Watch</span> Collection </h1>
             <div className="row g-4 mt-2">
@@ -34,6 +37,7 @@ const Products = () => {
                 ))}
             </div>
         </div>
+        <Footer></Footer>
         </div>
     );
 };

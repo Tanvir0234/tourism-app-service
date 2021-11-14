@@ -6,7 +6,7 @@ const AllOrders = () => {
     
 
     useEffect(() => {
-        fetch("http://localhost:5000/allOrders")
+        fetch("https://mighty-reaches-12627.herokuapp.com/allOrders")
             .then((res) => res.json())
             .then((data) => {
                 
@@ -18,7 +18,7 @@ const AllOrders = () => {
     const handleDelete = (id) => {
         let answer = window.confirm("Are you sure?")
         if(answer){
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://mighty-reaches-12627.herokuapp.com/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })

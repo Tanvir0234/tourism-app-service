@@ -24,19 +24,14 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto py-2" >
-                            <Nav.Link className="btn btn-warning fw-bold me-2 px-3" as={Link} to="/home">
+                            <Nav.Link className="btn text-white fw-bold me-2 px-3" as={Link} to="/home">
                                 Home
                             </Nav.Link>
-                            <Nav.Link className="btn btn-warning fw-bold me-2" as={Link} to="/products">
+                            <Nav.Link className="btn text-white fw-bold me-2" as={Link} to="/products">
                                 More Watch
                             </Nav.Link>
                             
-                            <Nav.Link className="btn btn-warning fw-bold me-2" to="/aboutUs">
-                                About Us
-                            </Nav.Link>
-                            <Nav.Link className="btn btn-warning fw-bold me-2" to="/contactUs">
-                                Contact Us
-                            </Nav.Link>
+                           
 
 
                             
@@ -53,14 +48,14 @@ const Header = () => {
                <Nav.Link as={Link} to="/login">
                <button
                  onClick={logOut}
-                 className="btn btn-danger fw-bold "
+                 className="btn btn-danger rounded-pill fw-bold "
                >
                  Log Out
                </button>{" "}
                </Nav.Link> 
              </>
            ) : (
-             <Nav.Link className="btn btn-warning text-primary fw-bold" as={Link} to="/login">
+             <Nav.Link className="btn text-primary fw-bold" as={Link} to="/login">
                log In
              </Nav.Link>
            )}
