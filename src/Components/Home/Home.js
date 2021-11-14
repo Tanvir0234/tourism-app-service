@@ -33,7 +33,7 @@ const Home = () => {
                         alt="Second slide"
                     />
 
-                    <Carousel.Caption className="carousel-caption d-none d-md-block">
+                    <Carousel.Caption className="carousel-caption d-sm-block d-md-block">
                         <h2>THE WATCH <br /> EVERYONE DESIRE </h2>
                         <p>EMPIRE COLLECTION</p>
                         <p><a href="#">More Info</a></p>

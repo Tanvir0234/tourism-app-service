@@ -3,6 +3,7 @@ import './Dashboard.css'
 import AddProduct from './AddProduct/AddProduct';
 import AllOrders from './AllOrders/AllOrders';
 import Orders from './Orders/Orders';
+import MakeAdmin from './MakeAdmin/MakeAdmin';
 
 const Dashboard = () => {
     const [isActive, setIsActive] = useState(false)
@@ -44,6 +45,14 @@ const Dashboard = () => {
                                             Manage All Order
                                         </li>
                                     </div>
+                                    <div className="list">
+                                        <li
+                                            onClick={() => setControl("makeAdmin")}
+                                            className="menu   p-2"
+                                        >
+                                            Make Admin
+                                        </li>
+                                    </div>
 
                                 </div>
                             </div>
@@ -52,6 +61,7 @@ const Dashboard = () => {
                             {control === "orders" && <Orders></Orders>}
                             {control === "addProduct" && <AddProduct></AddProduct>}
                             {control === "manageOrder" && <AllOrders></AllOrders>}
+                            {control === "makeAdmin" && <MakeAdmin></MakeAdmin>}
                         </div>
                     </div>
                 </div>
