@@ -5,6 +5,8 @@ import AllOrders from './AllOrders/AllOrders';
 import Orders from './Orders/Orders';
 import MakeAdmin from './MakeAdmin/MakeAdmin';
 import useAuth from '../Hooks/useAuth';
+import AddReview from './AddReview/AddReview';
+import Payment from './Payment/Payment';
 
 const Dashboard = () => {
     const { admin } = useAuth();
@@ -19,7 +21,7 @@ const Dashboard = () => {
                             <div className="area  p-1">
                                 <h6 className="text-center fs-2 text-white fw-bold mt-3">Dashboard</h6>
                                 <div className=" mt-3 ">
-                                    <div className="list active">
+                                    <div className="list">
                                         <li
                                             onClick={() => {
                                                 setControl("orders");
@@ -31,14 +33,24 @@ const Dashboard = () => {
                                             Orders
                                         </li>
                                     </div>
+                                    <div className="list active">
+                                            <li
+                                                onClick={() => setControl("payment")}
+                                                className="menu  p-2"
+                                            >
+                                                Payment
+                                            </li>
+                                        </div>
                                     <div className="list">
-                                        <li
-                                            onClick={() => setControl("manageOrder")}
-                                            className="menu   p-2"
-                                        >
-                                            Manage All Order
-                                        </li>
-                                    </div>
+                                            <li
+                                                onClick={() => setControl("addReview")}
+                                                className="menu  p-2"
+                                            >
+                                                Add Your Review
+                                            </li>
+                                        </div>
+                                    
+                                   
                                     {admin && <div>
                                         <div className="list">
                                             <li
@@ -48,6 +60,15 @@ const Dashboard = () => {
                                                 Add New Product
                                             </li>
                                         </div>
+
+                                        <div className="list">
+                                        <li
+                                            onClick={() => setControl("manageOrder")}
+                                            className="menu   p-2"
+                                        >
+                                            Manage All Order
+                                        </li>
+                                    </div>
 
                                         <div className="list">
                                             <li
@@ -66,13 +87,10 @@ const Dashboard = () => {
                         <div className="col-md-9 text-center  text-center">
                             {control === "orders" && <Orders></Orders>}
                             {control === "manageOrder" && <AllOrders></AllOrders>}
-
-
                             {control === "makeAdmin" && <MakeAdmin></MakeAdmin>}
                             {control === "addProduct" && <AddProduct></AddProduct>}
-
-
-
+                            {control === "addReview" && <AddReview></AddReview>}
+                            {control === "payment" && <Payment></Payment>}
                         </div>
                     </div>
                 </div>

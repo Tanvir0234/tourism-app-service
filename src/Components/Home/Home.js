@@ -6,10 +6,16 @@ import banner2 from '../../images/banner/b1.jpg'
 import banner3 from '../../images/banner/wb3.jpg'
 import { Link } from 'react-router-dom';
 import useProducts from '../Hooks/useProducts';
+import Review from '../Review/Review';
+
 
 const Home = () => {
 
     const { products } = useProducts([]);
+
+   
+
+
 
     return (
         <div>
@@ -55,9 +61,9 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel>
 
-{/*Feature product */}
+            {/*Feature product */}
 
-<h1 className="text-center m-4"><span className="text-danger">Feature</span> Product</h1>
+            <h1 className="text-center m-4"><span className="text-danger">Feature</span> Product</h1>
             <div className="container">
                 <div className="row g-4 my-4">
                     {products.map((product) => (
@@ -86,7 +92,10 @@ const Home = () => {
             </div>
 
 
+            {/*Client Review------*/}
 
+            <Review></Review>
+          
 
 
 

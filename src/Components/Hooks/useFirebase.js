@@ -51,7 +51,7 @@ const useFirebase = () =>{
       .then((userCredential) => {
           setAuthError('')
         //setUser(user);
-      
+        history.replace('/')
       })
       .catch((error) => {
         const errorCode = error.code;

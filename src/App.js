@@ -2,12 +2,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import AuthProvider from './Components/Context/AuthProvider';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Details from './Components/Details/Details';
 import Login from './Components/Firebase/Login/Login';
 import Register from './Components/Firebase/Register/Register';
 import Home from './Components/Home/Home';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Products from './Components/Products.js/Products';
 import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
@@ -37,9 +40,9 @@ function App() {
         <Route path="/dashboard">
            <Dashboard></Dashboard>
         </Route>
-        <Route path="/details/:productId">
+        <PrivateRoute path="/details/:productId">
            <Details></Details>
-        </Route>
+        </PrivateRoute>
 
      </Switch>
      <Footer></Footer>

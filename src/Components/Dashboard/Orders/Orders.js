@@ -46,7 +46,7 @@ const Orders = () => {
                         <tr>
                             <th>#</th>
                             <th>Name</th>
-                            <th>Product Image</th>
+                            <th>Product Name</th>
                             <th>Price</th>
                             <th>Address</th>
                             <th>Stetus</th>
@@ -57,7 +57,7 @@ const Orders = () => {
                             <tr>
                                 <td>{index}</td>
                                 <td>{order.name}</td>
-                                <td><img src={order.image} alt="" className="image" /></td>
+                                <td>{order.watch}</td>
                                 <td>$ {order.price}</td>
                                 <td>{order.address}</td>
                                 <td>{order.stetus}</td>

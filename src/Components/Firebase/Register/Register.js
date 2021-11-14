@@ -55,7 +55,7 @@ const Register = () => {
                                         <input name="password" onBlur={handleOnBlur} type="password" className="form-control" id="exampleInputPassword1" />
                                     </div>
                                    
-                                    <button type="submit" className="btn btn-primary">Submit</button>
+                                    <button type="submit" className="btn btn-primary">Register</button>
                                 </form>
 
                             </div>
