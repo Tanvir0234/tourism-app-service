@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
+
 import './Order.css'
 
 const Orders = () => {
@@ -37,9 +38,12 @@ const Orders = () => {
 
     };
     return (
-        <div>
+
+        <>
+              
+              <div>
            
-           <h1 className="text-center">Your Order : {orders.length}</h1>
+           <h1 className="text-center mt-5">Your Order : {orders.length}</h1>
             <div class="table-responsive">
                 <table class="table">
                 <thead>
@@ -56,7 +60,7 @@ const Orders = () => {
                         <tbody>
                             <tr>
                                 <td>{index}</td>
-                                <td>{order.name}</td>
+                                <td>{user?.displayName}</td>
                                 <td>{order.watch}</td>
                                 <td>$ {order.price}</td>
                                 <td>{order.address}</td>
@@ -74,6 +78,9 @@ const Orders = () => {
             </div>
 
         </div>
+              
+        </>
+       
     );
 };
 

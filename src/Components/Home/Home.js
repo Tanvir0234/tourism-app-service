@@ -9,20 +9,23 @@ import useProducts from '../Hooks/useProducts';
 import Review from '../Review/Review';
 import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
+import image1 from '../../images/van.png'
+import image2 from '../../images/support.png'
+import image3 from '../../images/contact.png'
 
 
 const Home = () => {
 
     const { products } = useProducts([]);
 
-   
+
 
 
 
     return (
         <div>
-            <Header/>
-     
+            <Header />
+
             <Carousel >
                 <Carousel.Item>
                     <img
@@ -43,7 +46,7 @@ const Home = () => {
                         alt="Second slide"
                     />
 
-                    <Carousel.Caption className="carousel-caption d-sm-block d-md-block">
+                    <Carousel.Caption className="carousel-caption d-md-block">
                         <h2>THE WATCH <br /> EVERYONE DESIRE </h2>
                         <p>EMPIRE COLLECTION</p>
                         <p><a href="#">More Info</a></p>
@@ -64,6 +67,43 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+
+            {/*Catagory support */}
+            <div className="container ">
+                <div className="row ms-5 mt-5">
+                    <hr />
+                    <div className="col-md-4 col-sm-12 d-flex">
+                        <div className="mt-1">
+                            <img src={image1} alt="" />
+                        </div>
+                        <div className="ms-2">
+                            <h6 className="text-danger fw-bold">Free Shipping</h6>
+                            <p>Free Shipping On Order</p>
+                        </div>
+                    </div>
+                    <div className="col-md-4 col-sm-12 d-flex">
+                        <div className="mt-1">
+                            <img src={image2} alt="" />
+                        </div>
+                        <div className="ms-2">
+                            <h6 className="text-danger fw-bold"> Support 24/7</h6>
+                            <p>Contact us 24 hrs a day</p>
+                        </div>
+                    </div>
+                    <div className="col-md-4 col-sm-12 d-flex">
+                        <div className="mt-1">
+                            <img src={image3} alt="" />
+                        </div>
+                        <div className="ms-2">
+                            <h6 className="text-danger fw-bold"> Payment Secure</h6>
+                            <p>Free shipping on order</p>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+
+
 
             {/*Feature product */}
 
@@ -86,7 +126,7 @@ const Home = () => {
                                 </div>
 
                                 <Link to={`/details/${product._id}`}>
-                                    <button className="btn btn-danger align mx-4 mb-3">See Details</button>
+                                    <button className="btn btn-danger align mb-3">See Details</button>
                                 </Link>
                             </div>
 
@@ -99,7 +139,7 @@ const Home = () => {
             {/*Client Review------*/}
 
             <Review></Review>
-          
+
 
 
             <Footer></Footer>

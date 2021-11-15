@@ -34,7 +34,7 @@ const Dashboard = () => {
                                                 setIsActive(true)
                                             }}
 
-                                            className={isActive ? ' menu p-2' : "menu p-2"}
+                                            className={isActive ? ' menu p-2' : "active menu p-2"}
                                         >
                                             Orders
                                         </li>

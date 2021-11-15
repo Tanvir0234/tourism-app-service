@@ -46,12 +46,13 @@ const useFirebase = () =>{
         .finally(() => setIsLoading(false));
     };
     
-    const loginUser = (email, password) => {
+    const loginUser = (email, password,location ,history) => {
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
           setAuthError('')
         //setUser(user);
-        history.replace('/')
+        const redirect_uri = location.state?.from || '/home';
+        history.push(redirect_uri);
       })
       .catch((error) => {
         const errorCode = error.code;

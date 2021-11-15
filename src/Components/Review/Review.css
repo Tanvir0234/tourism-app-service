@@ -3,16 +3,17 @@
 }
 .review{
     height: 400px;
+    width: 300px;
     overflow-y: auto;
     
 }
 .align-image{
-    margin-left: 70px;
+    margin-left: 55px;
     margin-top: 20px;
 }
 .review-image{
     height: 150px;
-    width: 200px;
+    width: 180px;
     
     border-radius: 50%;
     

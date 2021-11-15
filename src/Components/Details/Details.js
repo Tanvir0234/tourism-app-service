@@ -4,6 +4,7 @@ import { useHistory, useParams } from 'react-router';
 import useAuth from '../Hooks/useAuth';
 import { useForm } from 'react-hook-form';
 
+
 const Details = () => {
     const { productId } = useParams();
     const [details, setDetails] = useState([])
@@ -23,8 +24,8 @@ const Details = () => {
     useEffect(() => {
         const foundDetail = details.find(detail => detail._id === productId);
         setSingleProduct(foundDetail);
-
-    }, [details])
+        reset(foundDetail)
+    }, [details,reset])
 
     {/*---------------------Place Order---------------------------------*/}
 
@@ -41,16 +42,16 @@ const Details = () => {
         })
             .then((res) => res.json())
             .then((result) => {
+                console.log(result)
                 if (result.insertedId) {
                     alert('order Success')
-                    history.push('/myOrders')
-                    console.log(result)
+                    history.push('/dashboard')
+                    
                 }
             });
 
         reset();
-        //history.push('/myOrders')
-        console.log(data)
+        
         
     }
 
@@ -75,7 +76,10 @@ const Details = () => {
                                 <input  {...register("email", )} value={user?.email} readOnly placeholder="Email" className="p-2 m-2" /><br />
                                 <input type="number" {...register("price") } value={singleProduct?.price}   placeholder="Price Multiple the Person " className="p-2 m-2" /><br />
                                 <input {...register("address", )}  placeholder="Address" className="p-2 m-2" /> <br />
+                                
                                 <input type="submit" className="btn btn-danger px-5 mx-4" /><br />
+                            
+                                
 
                             </form>
 

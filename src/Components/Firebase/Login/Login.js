@@ -14,7 +14,7 @@ const Login = () => {
 
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || '/home';
+   // const redirect_uri = location.state?.from || '/home';
 
     const handleOnChange = e => {
         const field = e.target.name;
@@ -26,9 +26,9 @@ const Login = () => {
     }
     const handleLoginSubmit = e => {
 
-        loginUser(loginData.email, loginData.password);
+        loginUser(loginData.email, loginData.password ,location ,history);
 
-        history.push(redirect_uri);
+       // history.push(redirect_uri);
         e.preventDefault();
     }
     return (

@@ -12,8 +12,8 @@ import Register from './Components/Firebase/Register/Register';
 import Home from './Components/Home/Home';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Products from './Components/Products.js/Products';
-import Footer from './Components/Shared/Footer/Footer';
-import Header from './Components/Shared/Header/Header';
+import Orders from './Components/Dashboard/Orders/Orders';
+
 
 function App() {
   return (
@@ -36,6 +36,9 @@ function App() {
         </Route>
         <Route path="/register">
            <Register></Register>
+        </Route>
+        <Route path="/orders">
+           <Orders></Orders>
         </Route>
         <Route path="/dashboard">
            <Dashboard></Dashboard>
