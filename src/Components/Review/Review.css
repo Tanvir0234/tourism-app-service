@@ -4,7 +4,7 @@
 .review{
     height: 400px;
     width: 300px;
-    overflow-y: auto;
+    overflow-y: hidden;
     
 }
 .align-image{

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import ReactStars from "react-rating-stars-component";
+
 import './Review.css'
 
 const Review = () => {
@@ -27,7 +29,7 @@ const Review = () => {
                         <div key={review._id} className="col-md-6 col-lg-4 col-sm-12">
 
                             <div className="card bg-light mb-5  review shadow  border rounded-4">
-                                
+
                                 <div className="align-image">
                                     <img src={review.image} className=" img-fluid review-image" alt="..." />
 
@@ -37,8 +39,21 @@ const Review = () => {
 
                                 <div className="card-body">
                                     <h5 className="card-title text-center fw-bold fs-2"> <span className="text-warning">{review.name}</span> </h5>
-                                    <h6 className="card-text text-center">{review.rating}</h6>
-                                    <p className="text-center text-secondary"> <span  className="text-warning fw-bold fs-4">"</span> {review.description}<span  className="text-warning fw-bold fs-4">"</span></p>
+                                    <div className="d-flex align-items-center justify-content-center">
+                                        <div>
+                                            <ReactStars
+
+                                                count={review.rating}
+                                                // onChange={ratingChanged}
+                                                size={24}
+                                                half={true}
+                                                activeColor="#ffd700"
+                                            />
+                                        </div>
+                                    </div>
+
+
+                                    <p className="text-center text-secondary"> <span className="text-warning fw-bold fs-4">"</span> {review.description}<span className="text-warning fw-bold fs-4">"</span></p>
                                 </div>
 
 
