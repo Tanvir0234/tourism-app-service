@@ -23,7 +23,7 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mx-auto py-2" >
+                        <Nav className="ms-auto py-2" >
                             <Nav.Link className="btn text-white fw-bold me-2 px-3" as={Link} to="/home">
                                 Home
                             </Nav.Link>
@@ -41,9 +41,9 @@ const Header = () => {
          <Nav.Link className="text-white fw-bold me-2" as={Link} to="/dashboard">
                       Dashboard
                     </Nav.Link>
-               <p className="mb-0 mt-2 ms-3 fw-bold text-white">
+               <p className="mb-0 mt-2 ms-3 fw-bold text-warning">
             
-                {user.displayName}
+                {user?.displayName}
                </p>
                <Nav.Link as={Link} to="/login">
                <button
@@ -55,7 +55,7 @@ const Header = () => {
                </Nav.Link> 
              </>
            ) : (
-             <Nav.Link className="btn text-primary fw-bold" as={Link} to="/login">
+             <Nav.Link className="btn btn-outline-warning rounded-pill px-3 text-white fw-bold" as={Link} to="/login">
                log In
              </Nav.Link>
            )}

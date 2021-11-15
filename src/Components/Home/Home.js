@@ -12,6 +12,7 @@ import Footer from '../Shared/Footer/Footer';
 import image1 from '../../images/van.png'
 import image2 from '../../images/support.png'
 import image3 from '../../images/contact.png'
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 
 const Home = () => {
@@ -126,7 +127,7 @@ const Home = () => {
                                 </div>
 
                                 <Link to={`/details/${product._id}`}>
-                                    <button className="btn btn-danger align mb-3">See Details</button>
+                                    <button className="btn btn-danger align mb-3">See Details <FaAngleDoubleRight></FaAngleDoubleRight></button>
                                 </Link>
                             </div>
 

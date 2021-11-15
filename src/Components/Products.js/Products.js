@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import useProducts from '../Hooks/useProducts';
 import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Products = () => {
     const {products} = useProducts([]);
@@ -29,7 +30,7 @@ const Products = () => {
                             </div>
 
                             <Link to={`/details/${product._id}`}>
-                                <button className="btn btn-danger align mx-4 mb-3">See Details  </button>
+                                <button className="btn btn-danger align mb-3">See Details <FaAngleDoubleRight></FaAngleDoubleRight> </button>
                             </Link>
                         </div>
 
