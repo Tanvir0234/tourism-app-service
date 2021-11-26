@@ -66,7 +66,7 @@ const AllOrders = () => {
                 <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
+                            <th>Email</th>
                             <th>Product Name</th>
                             <th>Price</th>
                             <th>Address</th>
@@ -77,7 +77,7 @@ const AllOrders = () => {
                         <tbody>
                             <tr>
                                 <td>{index}</td>
-                                <td>{user?.name}</td>
+                                <td>{user?.email}</td>
                                 <td>{order.watch}</td>
                                 <td>$ {order.price}</td>
                                 <td>{order.address}</td>

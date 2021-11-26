@@ -30,13 +30,7 @@ const Header = () => {
                             <Nav.Link className="btn text-white fw-bold me-2" as={Link} to="/products">
                                 More Watch
                             </Nav.Link>
-                            
-                           
-
-
-                            
-
-           {user?.email ? (
+                      {user?.email ? (
              <>
          <Nav.Link className="text-white fw-bold me-2" as={Link} to="/dashboard">
                       Dashboard

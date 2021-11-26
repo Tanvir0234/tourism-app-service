@@ -112,26 +112,31 @@ const Home = () => {
             <div className="container">
                 <div className="row g-4 my-4">
                     {products.map((product) => (
-
-                        <div key={product._id} className="col-md-6 col-lg-4 col-sm-12">
-
-                            <div className="card h-100 shadow  border rounded-3">
-
-                                <img src={product.image} className="rounded-start w-100  size" alt="..." />
-
-
-                                <div className="card-body">
-                                    <h5 className="card-title text-center">{product.name}</h5>
-                                    <p className="text-center">{product.description}</p>
-                                    <h6 className="card-text text-center"> Price : ${product.price}</h6>
+                        <div key={product._id} className="my-5 col-md-4 ">
+                            <div className="card w-100 h-100 text-center rounded border productCard">
+                                <div className="d-flex justify-content-center align-items-center h-75 p-2">
+                                    <img src={product.image} className="card-img-top h-75 w-75" alt="" />
                                 </div>
+                                <div className="card-body">
 
-                                <Link to={`/details/${product._id}`}>
-                                    <button className="btn btn-danger align mb-3">See Details <FaAngleDoubleRight></FaAngleDoubleRight></button>
-                                </Link>
+                                    <h5 className="card-title mt-3"><i className="fas fa-map-marker-alt"></i> {product.name}</h5>
+                                    <p className="text-secondary fst-italic fw-normal">{product.description}</p>
+                                    <div className="d-flex align-items-center justify-content-center">
+                                        <h6><span className="card-title fw-bold">Price : ${product.price}</span></h6>
+
+                                    </div>
+                                </div>
+                                <div className="card-footer">
+                                    <div className="">
+                                        <Link to={`/details/${product._id}`}><button className="product-btn">Book Now <FaAngleDoubleRight></FaAngleDoubleRight></button></Link>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
+
+
+
+
                     )).slice(0, 6)}
                 </div>
             </div>
@@ -149,3 +154,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

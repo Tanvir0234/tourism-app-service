@@ -28,3 +28,29 @@
 .align{
     margin-left: 125px;
 }
+.product-btn{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    border-radius: 17px;
+    font-size: 15px;
+    background-color: #00a3c8;
+    border: none;
+    color: white;
+    padding:10px 39px;
+}
+
+.productCard:hover img{
+    overflow: hidden;
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+.productCard:hover{
+    box-shadow: 1px 1px 7px 1px blue;
+    transition: all 0.4s;
+}
+.productCard{
+    border: none;
+}
+.card-title{
+    color: #ff7f47
+}
