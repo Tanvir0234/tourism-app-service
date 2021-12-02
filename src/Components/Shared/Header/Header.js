@@ -32,17 +32,17 @@ const Header = () => {
                             </Nav.Link>
                       {user?.email ? (
              <>
-         <Nav.Link className="text-white fw-bold me-2" as={Link} to="/dashboard">
+         <Nav.Link className="text-white fw-bold mx-auto px-3" as={Link} to="/dashboard">
                       Dashboard
                     </Nav.Link>
-               <p className="mb-0 mt-2 ms-3 fw-bold text-warning">
+               <p className="mt-2 fw-bold mx-auto text-warning">
             
                 {user?.displayName}
                </p>
-               <Nav.Link as={Link} to="/login">
+               <Nav.Link as={Link} to="/login" className="mx-auto">
                <button
                  onClick={logOut}
-                 className="btn btn-danger rounded-pill fw-bold "
+                 className="btn btn-danger rounded-pill fw-bold  px-3 "
                >
                  Log Out
                </button>{" "}

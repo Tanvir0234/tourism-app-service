@@ -77,13 +77,13 @@ const Details = () => {
                         <div className="mt-5 mb-5" >
                             <h1 className="text-center">Order Booking</h1>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <input  {...register("name",)} value={user?.displayName} placeholder="Your Name" className="p-2 m-2" /> <br />
-                                <input {...register("watch",)} value={singleProduct?.name} placeholder="Watch Name" className="p-2 m-2" /> <br />
-                                <input  {...register("email",)} value={user?.email} readOnly placeholder="Email" className="p-2 m-2" /><br />
-                                <input type="number" {...register("price")} value={singleProduct?.price} placeholder="Price Multiple the Person " className="p-2 m-2" /><br />
-                                <input {...register("address",)} placeholder="Address" className="p-2 m-2" /> <br />
+                                <input  {...register("name",)} value={user?.displayName} placeholder="Your Name" className="px-3 m-2 rounded-pill" /> <br />
+                                <input {...register("watch",)} value={singleProduct?.name} placeholder="Watch Name" className="px-3 m-2 rounded-pill" /> <br />
+                                <input  {...register("email",)} value={user?.email} readOnly placeholder="Email" className="px-3 m-2 rounded-pill" /><br />
+                                <input type="number" {...register("price")} value={singleProduct?.price} placeholder="Price Multiple the Person " className="px-3 m-2 rounded-pill" /><br />
+                                <input {...register("address",)} placeholder="Address" className="px-3 m-2 rounded-pill" /> <br />
 
-                                <input type="submit" className="btn btn-danger px-5 mx-4" /><br />
+                                <input type="submit" className="btn btn-danger px-5 mx-5 rounded-pill" /><br />
 
 
 
