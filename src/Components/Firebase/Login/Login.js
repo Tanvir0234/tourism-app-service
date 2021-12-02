@@ -56,8 +56,8 @@ const Login = () => {
 
                     </div>
                 </div>
-                <div className="col-lg-6 col-sm-12">
-                    <img src={image} alt="" />
+                <div className="col-lg-6 lock-image">
+                    <img className="img-fluid" src={image} alt="" />
                 </div>
             </div>
             <Footer></Footer>

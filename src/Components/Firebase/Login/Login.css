@@ -1,3 +1,8 @@
 .login-bg{
     background-color: #4ec0cb;
 }
+@media (max-width:940px){
+    .lock-image{
+        display: none;
+    }
+}
